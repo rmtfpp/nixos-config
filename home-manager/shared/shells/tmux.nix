@@ -24,9 +24,6 @@
     set -g base-index 1
     set -g pane-base-index 1
 
-    set -g status-bg #2e3440
-    set -g status-fg #d8dee9
-
     set-option -g status-position bottom
 
     set-window-option -g pane-base-index 1

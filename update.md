@@ -17,3 +17,5 @@ nix flake update
 And rebuild:
 
 sudo nixos-rebuild switch --flake .#rmtfpp@pc --impure --upgrade
+                             
+https://www.youtube.com/watch?v=DKD--Egx39Q

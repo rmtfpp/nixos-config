@@ -84,6 +84,11 @@ in
     qemu
   ];
 
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  users.users.rmtfpp.extraGroups = [ "libvirtd" ];
+
   # Obsidian needs electron, which is considered insecure
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"

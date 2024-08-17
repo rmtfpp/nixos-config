@@ -10,13 +10,12 @@
       [
         tmuxPlugins.yank                # Copy to system clipboard
         tmuxPlugins.better-mouse-mode   # Mouse support
+        tmuxPlugins.nord
       ];
     extraConfig = ''
     # Set colors for black and white theme
     set -g default-terminal "screen-256color"
 
-    set -g status-bg "#000000"  # Black background
-    set -g status-fg "#ffffff"  # White text
 
     # Enable mouse support
     set -g mouse on
@@ -24,6 +23,12 @@
     # Start windows and panes at 1, not 0
     set -g base-index 1
     set -g pane-base-index 1
+
+    set -g status-bg #2e3440
+    set -g status-fg #d8dee9
+
+    set-option -g status-position bottom
+
     set-window-option -g pane-base-index 1
     set-option -g renumber-windows on
 

@@ -47,34 +47,41 @@ editor nvim
 
 # kitten themes -------------------------
 
-# Black and White theme
-background #000000
-foreground #ffffff
+# importing Background
+background #2e3440
+# importing BackgroundFaint
+color16 #3b4252
+# importing BackgroundIntense
+color8 #434c5e
+# importing Color0
+color0 #4c566a
+# importing Color1
+color1 #bf616a
+# importing Color2
+color2 #ebcb8b
+# importing Color3
+color3 #d08770
+# importing Color4
+color4 #8fbcbb
+# importing Color5
+color5 #b48ead
+# importing Color6
+color6 #5e81ac
+# importing Color6Faint
+color22 #a3be8c
+# importing Color6Intense
+color14 #63d4e0
+# importing Color7
+color7 #d8dee9
+# importing Color7Faint
+color23 #e5e9f0
+# importing Color7Intense
+color15 #eceff4
+# importing Foreground
+foreground #d8dee9
+# importing ForegroundIntense
+color12 #eceff4
 
-# Grayscale Colors
-color0 #1a1a1a
-color8 #333333
-
-color1 #4d4d4d
-color9 #666666
-
-color2 #808080
-color10 #999999
-
-color3 #b3b3b3
-color11 #cccccc
-
-color4 #e6e6e6
-color12 #ffffff
-
-color5 #666666
-color13 #999999
-
-color6 #b3b3b3
-color14 #cccccc
-
-color7 #e6e6e6
-color15 #ffffff
 
 '';
   };

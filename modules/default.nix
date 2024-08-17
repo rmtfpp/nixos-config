@@ -81,6 +81,7 @@ in
     hyprpaper         # wallpaper engine for hyprland
     wl-gammactl       # anage screen gamma and contrast
 
+    qemu
   ];
 
   # Obsidian needs electron, which is considered insecure

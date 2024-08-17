@@ -80,6 +80,7 @@ in
     kitty             # Wayland terminal
     hyprpaper         # wallpaper engine for hyprland
     wl-gammactl       # anage screen gamma and contrast
+    gparted
 
     qemu
   ];

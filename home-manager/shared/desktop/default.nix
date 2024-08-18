@@ -5,6 +5,7 @@
       ./rofi.nix        # rofi configuration
       ./waybar.nix      # waibar configs
       ./neofetch.nix    # neofetch theme
+      ./zathura.nix
   ];
 
   # Set hyprland config file

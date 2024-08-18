@@ -64,7 +64,9 @@ in
     inkscape          # Vector graphics editor
     direnv
     onlyoffice-bin
-
+    xfce.thunar    
+    zathura
+    
     # Networking
     wget
     curl

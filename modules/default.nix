@@ -83,6 +83,7 @@ in
     hyprpaper         # wallpaper engine for hyprland
     wl-gammactl       # anage screen gamma and contrast
     gparted
+    python3
 
     qemu
   ];

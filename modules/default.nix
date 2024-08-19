@@ -84,6 +84,7 @@ in
     wl-gammactl       # anage screen gamma and contrast
     gparted
     python3
+    whatsapp-for-linux
 
     qemu
   ];

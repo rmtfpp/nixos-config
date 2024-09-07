@@ -94,6 +94,12 @@ in
 
   users.users.rmtfpp.extraGroups = [ "libvirtd" ];
 
+  networking.extraHosts = ''
+  192.168.122.138 test.default
+  192.168.122.138 test.learning
+  '';
+
+
   # Obsidian needs electron, which is considered insecure
   nixpkgs.config.permittedInsecurePackages = [
     "electron-25.9.0"

@@ -87,6 +87,7 @@ in
     whatsapp-for-linux
 
     qemu
+    dbeaver-bin
   ];
 
   virtualisation.libvirtd.enable = true;

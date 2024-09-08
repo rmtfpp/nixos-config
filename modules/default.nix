@@ -27,6 +27,11 @@ in
   # List packages installed in system profile, common to all users.
   # To search, run:
   # $ nix search wget
+  services.gnome.gnome-keyring = {
+    enable = true;
+  };
+
+
   environment.systemPackages = with pkgs; [
 
     # nix related
@@ -87,7 +92,10 @@ in
     whatsapp-for-linux
 
     qemu
-    dbeaver-bin
+    mysql-workbench
+    libsecret
+    gnome.seahorse
+    gnome.gnome-keyring
   ];
 
   virtualisation.libvirtd.enable = true;

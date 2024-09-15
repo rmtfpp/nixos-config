@@ -32,18 +32,7 @@
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
 
-    # System Administration
     powertop      # see power statistics on intel-based laptops
-                  # run a calibration with "powertop --calibrate"
-		  # It will take 5-10 minutes
-		  # then let It run for an hour and get power
-		  # estimation figures
-    btop          # System monitor
-    ncdu          # Analyze disk usage
-
-    # Media editing
-    audacity            # audio
-    obs-studio          # recording
 
  ];
 

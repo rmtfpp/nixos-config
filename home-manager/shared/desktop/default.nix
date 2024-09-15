@@ -1,25 +1,17 @@
 { pkgs, config, ... }:
 {
-  imports = [
-      # ./i3.nix
-      ./rofi.nix        # rofi configuration
-      ./waybar.nix      # waibar configs
-      ./neofetch.nix    # neofetch theme
-      ./zathura.nix
-  ];
 
-  # Set hyprland config file
-  home.file.".config/hypr/hyprland.conf" = {
-    # Overwrite the file
-    force = true;
-    text = builtins.readFile ./hyprland.conf;
+  home-manager.users.rmtfpp = {
+  dconf = {
+    enable = true;
+    settings."org/gnome/shell" = {
+      disable-user-extensions = false;
+      enabled-extensions = with pkgs.gnomeExtensions; [
+        blur-my-shell.extensionUuid
+        gsconnect.extensionUuid
+      ];
+    };
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
   };
-
-  # Set hyprpaper config file
-  home.file.".config/hypr/hyprpaper.conf" = {
-
-    # Overwrite the file
-    force = true;
-    text = builtins.readFile ./hyprpaper.conf;
-  };
+};
 }

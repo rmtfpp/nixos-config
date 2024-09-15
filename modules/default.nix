@@ -9,7 +9,7 @@ in
 
     # Enable memory optimization
     ./memory-optimization.nix
-
+    ./networking.nix
     # Set up users
     ./users.nix
     # Setup a custom community cache server
@@ -52,41 +52,26 @@ in
     # Developement
     git
     zsh-autosuggestions
-    zsh-syntax-highlighting               # Git interface
-    tmux              # Terminal multiplexer
+    zsh-syntax-highlighting              
+    tmux              
     sof-firmware
     efibootmgr
 
-    # Utilities / Misc
-    ranger            # Visual file manager
+    ranger
     zip
     unzip
     fastfetch         # neofetch alternative
     thunderbird       # popular mail client
     tree              # list files and folder in a tree structure
-    brightnessctl     # manage brightness
     unrar             # Extract .rar files
     inkscape          # Vector graphics editor
     direnv
     onlyoffice-bin
-    xfce.thunar    
     zathura
     
-    # Networking
     wget
     curl
 
-    # Wayland specific
-    waybar            # Simple bar, configured with json and css
-    dunst             # Notification manager
-    libnotify         # Dependency of dunst
-    rofi-wayland      # Wailand compatible rofi
-    rofi-power-menu   # Rofi but for power menu
-    hyprshot
-    wl-clipboard      # Save on clipboard from terminal
-    kitty             # Wayland terminal
-    hyprpaper         # wallpaper engine for hyprland
-    wl-gammactl       # anage screen gamma and contrast
     gparted
     python3
     whatsapp-for-linux
@@ -102,11 +87,6 @@ in
   programs.virt-manager.enable = true;
 
   users.users.rmtfpp.extraGroups = [ "libvirtd" ];
-
-  networking.extraHosts = ''
-  192.168.122.138 test.default
-  192.168.122.138 test.learning
-  '';
 
 
   # Obsidian needs electron, which is considered insecure

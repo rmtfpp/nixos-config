@@ -3,6 +3,7 @@
 {
     imports = [
        ./desktop
+       ./dev
        ./shells
     ];
 

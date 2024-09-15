@@ -1,38 +1,23 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
 {
   config,
   pkgs,
   ...
 }:
 let
-
-  # Needed for hyprland
   flake-compat = builtins.fetchTarball "https://github.com/edolstra/flake-compat/archive/master.tar.gz";
-
-  hyprland-flake = (import flake-compat {
-    src = builtins.fetchTarball "https://github.com/hyprwm/Hyprland/archive/master.tar.gz";
-  }).defaultNix;
-
 in
 {
-imports = [
-  ./hardware-configuration.nix
-];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  # Bootloader.
-  networking.hostName = "pc"; # Define your hostname.
-
-  # Enable networking
+  networking.hostName = "pc";
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
   time.timeZone = "Europe/Rome";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -47,19 +32,17 @@ imports = [
     LC_TIME = "it_IT.UTF-8";
   };
 
-  # ------------------------- DESKTOP ENVIRONMENT ------------------------- #
+
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true; # Enable GNOME Display Manager
-    desktopManager.gnome.enable = true; # Enable GNOME Desktop Environment
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
 
-  # Enable CUPS to print documents.
   services.printing.enable = true;
   console.keyMap = "it2";
   nixpkgs.config.allowUnfree = true;
 
-  # Exclude certain GNOME applications from installation
   environment.gnome.excludePackages = (with pkgs; [
     gnome-photos
     gnome-tour
@@ -78,7 +61,6 @@ imports = [
     atomix
   ]);
 
-  # Enable sound and configure PipeWire
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -89,10 +71,7 @@ imports = [
     pulse.enable = true;
   };
 
-  # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data were taken.
-  system.stateVersion = "24.05"; # Did you read the comment?
+  system.stateVersion = "24.05";
 }

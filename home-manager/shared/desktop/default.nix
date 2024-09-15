@@ -8,7 +8,7 @@
       disable-user-extensions = false;
       enabled-extensions = with pkgs.gnomeExtensions; [
         blur-my-shell.extensionUuid
-        gsconnect.extensionUuid
+        just-perfection.extensionUuid
       ];
     };
     settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
